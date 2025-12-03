@@ -44,6 +44,7 @@ body {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0.6rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -358,14 +359,6 @@ body {
     font-size: 0.9rem;
   }
 
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-content p {
-    font-size: 1.2rem;
-  }
-
   .section {
     padding: 3rem 1rem;
   }
@@ -378,19 +371,24 @@ body {
     font-size: 1.8rem;
   }
 
-  .footer {
+  .footer-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 2rem;
   }
 
   .footer-right {
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
   }
 
-  .location-info {
-    grid-template-columns: 1fr;
+  .footer-contact {
+    align-items: center;
+  }
+
+  .contact-line {
+    justify-content: center;
   }
 
   .location-wrapper {
@@ -400,33 +398,16 @@ body {
   .map-container {
     height: 300px;
   }
-
-  .social-links {
-    flex-direction: column;
-    gap: 1rem;
-  }
 }
 
 @media (max-width: 480px) {
   .nav-container {
-    padding: 1rem;
-  }
-
-  .logo {
-    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
   }
 
   .nav-links {
     gap: 1rem;
     font-size: 0.8rem;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
   }
 
   .section-content h2 {
@@ -435,9 +416,5 @@ body {
 
   .section-content h3 {
     font-size: 1.1rem;
-  }
-
-  .sustainability-grid {
-    grid-template-columns: 1fr;
   }
 }
