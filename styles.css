@@ -352,23 +352,23 @@ body {
   line-height: 1.8;
 }
 
-.phone-link {
-  text-decoration: none;
-  color: var(--text-gray);
-  transition: color 0.3s ease;
-}
-
-.phone-link:hover {
-  color: var(--primary-brown);
-}
-
 .email-link {
   text-decoration: none;
-  color: var(--text-gray);
+  color: var(--bg-white);
   transition: color 0.3s ease;
 }
 
 .email-link:hover {
+  color: var(--primary-brown);
+}
+
+.phone-link {
+  text-decoration: none;
+  color: var(--bg-white);
+  transition: color 0.3s ease;
+}
+
+.phone-link:hover {
   color: var(--primary-brown);
 }
 
@@ -415,15 +415,59 @@ body {
 .footer {
   background-color: var(--bg-dark);
   color: var(--bg-white);
-  text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
   line-height: 1.8;
+}
+
+.footer > div:first-child {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.footer-left {
+  text-align: left;
+  flex: 1;
+}
+
+.footer-right {
+  text-align: right;
+  flex: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 2rem;
 }
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  text-align: right;
+}
+
+.contact-line {
+  color: var(--bg-white);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-line .social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  color: var(--primary-brown);
+}
+
 .footer-logo {
   height: clamp(70px, 15vw, 120px);
   width: auto;
@@ -469,6 +513,17 @@ body {
 
   .section-content h2 {
     font-size: 1.8rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .footer-right {
+    align-items: flex-start;
+    width: 100%;
   }
 
   .location-info {
