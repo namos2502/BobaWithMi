@@ -312,7 +312,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  align-items: flex-end;
+  align-items: flex-start;
   text-align: right;
 }
 
@@ -329,7 +329,7 @@ body {
   align-items: center;
   justify-content: center;
   line-height: 1;
-  color: var(--primary-brown);
+  color: var(--bg-white);
 }
 
 .footer-logo {
