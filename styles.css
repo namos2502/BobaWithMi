@@ -85,6 +85,24 @@ body {
   color: var(--primary-brown);
 }
 
+.menu-btn {
+  background-color: transparent;
+  color: var(--text-dark);
+  padding: 0;
+  border-radius: 0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  border: none;
+  font-size: 0.85rem;
+}
+
+.menu-btn:hover {
+  color: var(--primary-brown);
+  background-color: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
 .order-btn {
   background-color: var(--primary-brown) !important;
   color: var(--bg-white) !important;
@@ -98,7 +116,9 @@ body {
   background-color: var(--primary-brown-dark) !important;
   transform: translateY(-2px);
   box-shadow: var(--shadow-medium);
-} /* Hero Section */
+}
+
+/* Hero Section */
 .hero {
   height: 100vh;
   display: flex;
