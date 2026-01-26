@@ -276,6 +276,39 @@ body {
   letter-spacing: 2px;
 }
 
+.section-content .menu-btn {
+  /* Padding */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  /* Body text */
+  font-family: 'Be Vietnam Pro';
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--button-text-color);
+  text-decoration: none;
+
+  /* Colors */
+  border-radius: 1.125rem;
+  border: 1px solid #ffffe4;
+  background: var(--primary-color);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: color 0.3s ease;
+}
+
+.section-content .menu-btn:hover {
+  background-color: #4b6943;
+}
+
+.section-content .menu-btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 /* ========================================
    LOCATION / MAP SECTION
    ======================================== */
@@ -443,6 +476,10 @@ body {
     font-size: 0.9rem;
   }
 
+  .title {
+    font-size: 2.5rem;
+  }
+
   .section {
     padding: 3rem 1rem;
   }
@@ -494,15 +531,34 @@ body {
   }
 
   .nav-links {
-    gap: 1rem;
-    font-size: 0.8rem;
+    gap: 0.5rem;
+  }
+
+  .nav-links li:nth-child(1),
+  .nav-links li:nth-child(2) {
+    display: none;
+  }
+
+  .nav-links a.nav-btn {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .section {
+    min-height: 100vh;
   }
 
   .section-content h2 {
     font-size: 1.5rem;
-  }
-
-  .section-content h3 {
-    font-size: 1.1rem;
   }
 }
