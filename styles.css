@@ -1,11 +1,17 @@
-/* Reset and Base Styles */
+/* ========================================
+   RESET AND BASE STYLES
+   ======================================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* CSS Variables */
+/* ========================================
+   CSS VARIABLES
+   ======================================== */
+
 :root {
   --primary-brown: #8b7355;
   --primary-brown-dark: #6d5845;
@@ -31,6 +37,11 @@
   --button-text-color: #ffffe4;
   --button-text-color-hover: #b6b4b4;
 }
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
 .title {
   /* Heading Title */
   color: var(--text-color);
@@ -40,6 +51,7 @@
   font-weight: 700;
   line-height: normal;
 }
+
 .sub-title {
   /* Heading Subtitle */
   color: var(--text-color);
@@ -49,6 +61,7 @@
   font-weight: 400;
   line-height: normal;
 }
+
 .body-text {
   /* Body Text */
   color: var(--text-color);
@@ -58,6 +71,7 @@
   font-weight: 400;
   line-height: normal;
 }
+
 .alter-text {
   /* Altered Body Text */
   color: var(--text-color);
@@ -67,6 +81,16 @@
   font-weight: 300;
   line-height: normal;
 }
+
+.highlight-text {
+  /* Highlighted text in body */
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
 
 html {
   scroll-behavior: smooth;
@@ -79,7 +103,10 @@ body {
   background-color: var(--bg-light);
 }
 
-/* Navigation */
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -87,6 +114,7 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   z-index: 1000;
 }
+
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -159,7 +187,10 @@ body {
   background-color: #4b6943;
 }
 
-/* Hero Section */
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
 .hero {
   height: 100vh;
   display: flex;
@@ -214,7 +245,12 @@ body {
   50% {
     transform: translateY(-10px);
   }
-} /* Sections */
+}
+
+/* ========================================
+   SECTIONS
+   ======================================== */
+
 .section {
   width: 100%;
   padding: 6rem 2rem;
@@ -230,20 +266,6 @@ body {
 .section.alt {
   background-color: var(--bg-light-gray);
 }
-.section-number {
-  font-size: 4rem;
-  font-weight: 700;
-  color: var(--border-light);
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-}
-/* .section-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-  color: #000;
-  font-weight: 700;
-} */
 
 .section-number {
   font-size: 4rem;
@@ -252,20 +274,10 @@ body {
   margin-bottom: 1rem;
   letter-spacing: 2px;
 }
-/* 
-.section-content h3 {
-  font-size: 1.3rem;
-  color: var(--primary-brown);
-  margin-bottom: 2rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-} */
-/* .section-content p {
-  font-size: 1rem;
-  color: var(--text-light);
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-} */
+
+/* ========================================
+   LOCATION / MAP SECTION
+   ======================================== */
 
 .location-wrapper {
   display: grid;
@@ -283,6 +295,7 @@ body {
   overflow: hidden;
   box-shadow: var(--shadow-medium);
 }
+
 .location-details {
   display: flex;
   flex-direction: column;
@@ -295,6 +308,7 @@ body {
   border-radius: 8px;
   box-shadow: var(--shadow-light);
 }
+
 .info-block h4 {
   font-size: 1rem;
   font-weight: 700;
@@ -302,6 +316,7 @@ body {
   margin-bottom: 1rem;
   color: var(--text-dark);
 }
+
 .info-block p {
   font-size: 0.95rem;
   color: var(--text-gray);
@@ -335,7 +350,10 @@ body {
   line-height: 1;
 }
 
-/* Footer */
+/* ========================================
+   FOOTER
+   ======================================== */
+
 .footer {
   background-color: var(--bg-dark);
   color: var(--bg-white);
@@ -404,6 +422,7 @@ body {
   text-decoration: none;
   color: var(--bg-white);
 }
+
 .footer-logo-link:hover img {
   opacity: 0.8;
   transition: opacity 0.3s ease;
@@ -413,7 +432,10 @@ body {
   color: var(--bg-white);
 }
 
-/* Responsive Design */
+/* ========================================
+   RESPONSIVE DESIGN - Tablet (768px)
+   ======================================== */
+
 @media (max-width: 768px) {
   .nav-links {
     gap: 1.5rem;
@@ -460,6 +482,10 @@ body {
     height: 300px;
   }
 }
+
+/* ========================================
+   RESPONSIVE DESIGN - Mobile (480px)
+   ======================================== */
 
 @media (max-width: 480px) {
   .nav-container {
