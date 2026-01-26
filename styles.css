@@ -1,11 +1,17 @@
-/* Reset and Base Styles */
+/* ========================================
+   RESET AND BASE STYLES
+   ======================================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* CSS Variables */
+/* ========================================
+   CSS VARIABLES
+   ======================================== */
+
 :root {
   --primary-brown: #8b7355;
   --primary-brown-dark: #6d5845;
@@ -29,7 +35,14 @@
   --surface-color: #dde7da;
   --accent-color: #c5a9a2;
   --text-color: #3e3630;
+  --button-text-color: #ffffe4;
+  --button-text-color-hover: #b6b4b4;
 }
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
 .title {
   /* Heading Title */
   color: var(--text-color);
@@ -39,46 +52,62 @@
   font-weight: 700;
   line-height: normal;
 }
+
 .sub-title {
   /* Heading Subtitle */
   color: var(--text-color);
-  font-family: "Be Vietnam Pro";
+  font-family: 'Be Vietnam Pro';
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+
 .body-text {
   /* Body Text */
   color: var(--text-color);
-  font-family: "Be Vietnam Pro";
+  font-family: 'Be Vietnam Pro';
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+
 .alter-text {
   /* Altered Body Text */
   color: var(--text-color);
-  font-family: "Be Vietnam Pro";
+  font-family: 'Be Vietnam Pro';
   font-size: 0.625rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
 }
 
+.highlight-text {
+  /* Highlighted text in body */
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-dark);
   line-height: 1.6;
   background-color: var(--bg-light);
 }
 
-/* Navigation */
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -86,6 +115,7 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   z-index: 1000;
 }
+
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -115,55 +145,53 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2.5rem;
+  gap: 16px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--text-dark);
+  font-family: 'Be Vietnam Pro';
   font-weight: 500;
-  font-size: 0.85rem;
+  font-size: 1.125rem;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--primary-brown);
+  color: var(--primary-color);
 }
 
-.menu-btn {
-  background-color: transparent;
-  color: var(--text-dark);
-  padding: 0;
-  border-radius: 0;
-  font-weight: 500;
+.nav-links a.nav-btn {
+  /* Padding */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  /* Body text */
+  font-family: 'Be Vietnam Pro';
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--button-text-color);
+
+  /* Colors */
+  border-radius: 1.125rem;
+  border: 1px solid #ffffe4;
+  background: var(--primary-color);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   transition: color 0.3s ease;
-  border: none;
-  font-size: 0.85rem;
 }
 
-.menu-btn:hover {
-  color: var(--primary-brown);
-  background-color: transparent;
-  transform: none;
-  box-shadow: none;
+.nav-links a.nav-btn:hover {
+  background-color: #4b6943;
 }
 
-.order-btn {
-  background-color: var(--primary-brown) !important;
-  color: var(--bg-white) !important;
-  padding: 0.5rem 1rem !important;
-  border-radius: 4px;
-  font-weight: 600 !important;
-  transition: all 0.3s ease;
-}
+/* ========================================
+   HERO SECTION
+   ======================================== */
 
-.order-btn:hover {
-  background-color: var(--primary-brown-dark) !important;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-medium);
-}
-
-/* Hero Section */
 .hero {
   height: 100vh;
   display: flex;
@@ -218,7 +246,12 @@ body {
   50% {
     transform: translateY(-10px);
   }
-} /* Sections */
+}
+
+/* ========================================
+   SECTIONS
+   ======================================== */
+
 .section {
   width: 100%;
   padding: 6rem 2rem;
@@ -234,20 +267,6 @@ body {
 .section.alt {
   background-color: var(--surface-color);
 }
-.section-number {
-  font-size: 4rem;
-  font-weight: 700;
-  color: var(--border-light);
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-}
-/* .section-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-  color: #000;
-  font-weight: 700;
-} */
 
 .section-number {
   font-size: 4rem;
@@ -256,20 +275,10 @@ body {
   margin-bottom: 1rem;
   letter-spacing: 2px;
 }
-/* 
-.section-content h3 {
-  font-size: 1.3rem;
-  color: var(--primary-brown);
-  margin-bottom: 2rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-} */
-/* .section-content p {
-  font-size: 1rem;
-  color: var(--text-light);
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-} */
+
+/* ========================================
+   LOCATION / MAP SECTION
+   ======================================== */
 
 .location-wrapper {
   display: grid;
@@ -287,6 +296,7 @@ body {
   overflow: hidden;
   box-shadow: var(--shadow-medium);
 }
+
 .location-details {
   display: flex;
   flex-direction: column;
@@ -299,6 +309,7 @@ body {
   border-radius: 8px;
   box-shadow: var(--shadow-light);
 }
+
 .info-block h4 {
   font-size: 1rem;
   font-weight: 700;
@@ -306,6 +317,7 @@ body {
   margin-bottom: 1rem;
   color: var(--text-dark);
 }
+
 .info-block p {
   font-size: 0.95rem;
   color: var(--text-gray);
@@ -339,7 +351,10 @@ body {
   line-height: 1;
 }
 
-/* Footer */
+/* ========================================
+   FOOTER
+   ======================================== */
+
 .footer {
   background-color: var(--secondary-color);
   color: var(--bg-white);
@@ -408,6 +423,7 @@ body {
   text-decoration: none;
   color: var(--bg-white);
 }
+
 .footer-logo-link:hover img {
   opacity: 0.8;
   transition: opacity 0.3s ease;
@@ -417,7 +433,10 @@ body {
   color: var(--bg-white);
 }
 
-/* Responsive Design */
+/* ========================================
+   RESPONSIVE DESIGN - Tablet (768px)
+   ======================================== */
+
 @media (max-width: 768px) {
   .nav-links {
     gap: 1.5rem;
@@ -464,6 +483,10 @@ body {
     height: 300px;
   }
 }
+
+/* ========================================
+   RESPONSIVE DESIGN - Mobile (480px)
+   ======================================== */
 
 @media (max-width: 480px) {
   .nav-container {
