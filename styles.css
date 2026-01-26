@@ -25,6 +25,7 @@
   --primary-color: #6a9660;
   --secondary-color: #8e5545;
   --background-color: #ffffe4;
+  --button-text-color: #ffffe4;
   --surface-color: #dde7da;
   --accent-color: #c5a9a2;
   --text-color: #3e3630;
@@ -231,7 +232,7 @@ body {
 }
 
 .section.alt {
-  background-color: var(--bg-light-gray);
+  background-color: var(--surface-color);
 }
 .section-number {
   font-size: 4rem;
@@ -340,7 +341,7 @@ body {
 
 /* Footer */
 .footer {
-  background-color: var(--bg-dark);
+  background-color: var(--secondary-color);
   color: var(--bg-white);
   padding: 0;
   font-size: 0.9rem;
