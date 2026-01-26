@@ -28,6 +28,8 @@
   --surface-color: #dde7da;
   --accent-color: #c5a9a2;
   --text-color: #3e3630;
+  --button-text-color: #ffffe4;
+  --button-text-color-hover: #b6b4b4;
 }
 .title {
   /* Heading Title */
@@ -41,7 +43,7 @@
 .sub-title {
   /* Heading Subtitle */
   color: var(--text-color);
-  font-family: "Be Vietnam Pro";
+  font-family: 'Be Vietnam Pro';
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
@@ -50,7 +52,7 @@
 .body-text {
   /* Body Text */
   color: var(--text-color);
-  font-family: "Be Vietnam Pro";
+  font-family: 'Be Vietnam Pro';
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
@@ -59,7 +61,7 @@
 .alter-text {
   /* Altered Body Text */
   color: var(--text-color);
-  font-family: "Be Vietnam Pro";
+  font-family: 'Be Vietnam Pro';
   font-size: 0.625rem;
   font-style: normal;
   font-weight: 300;
@@ -71,7 +73,7 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-dark);
   line-height: 1.6;
   background-color: var(--bg-light);
@@ -114,52 +116,47 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2.5rem;
+  gap: 16px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--text-dark);
+  font-family: 'Be Vietnam Pro';
   font-weight: 500;
-  font-size: 0.85rem;
+  font-size: 1.125rem;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--primary-brown);
+  color: var(--primary-color);
 }
 
-.menu-btn {
-  background-color: transparent;
-  color: var(--text-dark);
-  padding: 0;
-  border-radius: 0;
-  font-weight: 500;
+.nav-links a.nav-btn {
+  /* Padding */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  /* Body text */
+  font-family: 'Be Vietnam Pro';
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--button-text-color);
+
+  /* Colors */
+  border-radius: 1.125rem;
+  border: 1px solid #ffffe4;
+  background: var(--primary-color);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   transition: color 0.3s ease;
-  border: none;
-  font-size: 0.85rem;
 }
 
-.menu-btn:hover {
-  color: var(--primary-brown);
-  background-color: transparent;
-  transform: none;
-  box-shadow: none;
-}
-
-.order-btn {
-  background-color: var(--primary-brown) !important;
-  color: var(--bg-white) !important;
-  padding: 0.5rem 1rem !important;
-  border-radius: 4px;
-  font-weight: 600 !important;
-  transition: all 0.3s ease;
-}
-
-.order-btn:hover {
-  background-color: var(--primary-brown-dark) !important;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-medium);
+.nav-links a.nav-btn:hover {
+  background-color: #4b6943;
 }
 
 /* Hero Section */
