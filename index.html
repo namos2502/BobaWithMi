@@ -204,7 +204,11 @@
         "sameAs": ["https://www.instagram.com/bobawithmi.va/"]
       }
     </script>
-
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -311,6 +315,73 @@
           Handcrafted boba teas, brewed fresh with organic leaves.
         </h2>
         <!-- Drinks Slideshow goes -->
+        <div class="swiper">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./resources/items/brownSugar.png"
+                  alt="Brown Sugar Milk Tea"
+                />
+                <div class="drink-label">Brown Sugar Milk Tea</div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./resources/items/cafeSuaDa.png"
+                  alt="Vietnamese Seasalt"
+                />
+                <div class="drink-label">Vietnamese Seasalt</div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./resources/items/flanSpecial.png"
+                  alt="Flan Special"
+                />
+                <div class="drink-label">Flan Special</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./resources/items/matchMango.png" alt="Classic" />
+                <div class="drink-label">Matcha Mango Milk Tea</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./resources/items/sunSet.png" alt="Sunset" />
+                <div class="drink-label">Sunset Tea</div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./resources/items/brownSugar.png"
+                  alt="Brown Sugar Milk Tea"
+                />
+                <div class="drink-label">Brown Sugar Milk Tea</div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./resources/items/cafeSuaDa.png"
+                  alt="Vietnamese Seasalt"
+                />
+                <div class="drink-label">Vietnamese Seasalt</div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./resources/items/flanSpecial.png"
+                  alt="Flan Special"
+                />
+                <div class="drink-label">Flan Special</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./resources/items/matchMango.png" alt="Classic" />
+                <div class="drink-label">Matcha Mango Milk Tea</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./resources/items/sunSet.png" alt="Sunset" />
+                <div class="drink-label">Sunset Tea</div>
+              </div>
+            </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -444,5 +515,25 @@
         </div>
       </div>
     </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        centeredSlides: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        keyboard: {
+          enabled: true,
+        },
+        mousewheel: {
+          thresholdDelta: 70,
+        },
+      });
+    </script>
   </body>
 </html>
