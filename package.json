@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.1.18",
-    "swiper": "^12.1.0",
     "tailwindcss": "^4.1.18"
   }
 }

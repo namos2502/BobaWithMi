@@ -1,17 +1,17 @@
-import Swiper from "swiper";
-import "swiper/css";
-
 //Swiper
 const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
+  loop: true,
+  slidesPerView: "auto",
   spaceBetween: 30,
-  freeMode: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  centeredSlides: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  keyboard: {
+    enabled: true,
+  },
+  mousewheel: {
+    thresholdDelta: 70,
   },
 });
