@@ -56,7 +56,7 @@
 .sub-title {
   /* Heading Subtitle */
   color: var(--text-color);
-  font-family: "Be Vietnam Pro";
+  font-family: 'Be Vietnam Pro';
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
@@ -66,7 +66,7 @@
 .body-text {
   /* Body Text */
   color: var(--text-color);
-  font-family: "Be Vietnam Pro";
+  font-family: 'Be Vietnam Pro';
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
@@ -76,7 +76,7 @@
 .alter-text {
   /* Altered Body Text */
   color: var(--text-color);
-  font-family: "Be Vietnam Pro";
+  font-family: 'Be Vietnam Pro';
   font-size: 0.625rem;
   font-style: normal;
   font-weight: 300;
@@ -98,7 +98,7 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-dark);
   line-height: 1.6;
   background-color: var(--bg-light);
@@ -151,7 +151,7 @@ body {
 .nav-links a {
   text-decoration: none;
   color: var(--text-dark);
-  font-family: "Be Vietnam Pro";
+  font-family: 'Be Vietnam Pro';
   font-weight: 500;
   font-size: 1.125rem;
   transition: color 0.3s ease;
@@ -169,7 +169,7 @@ body {
   padding-bottom: 10px;
 
   /* Body text */
-  font-family: "Be Vietnam Pro";
+  font-family: 'Be Vietnam Pro';
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
@@ -284,7 +284,7 @@ body {
   padding-bottom: 10px;
 
   /* Body text */
-  font-family: "Be Vietnam Pro";
+  font-family: 'Be Vietnam Pro';
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
@@ -311,13 +311,19 @@ body {
 /* ========================================
    DRINKS SLIDESHOW SECTION
    ======================================== */
+#menu .section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
 .swiper {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 20px;
 }
 .swiper-wrapper .swiper-slide {
-  width: 250px; /* Base width of your cards */
+  width: 250px;
   height: 350px;
   display: flex;
   flex-direction: column;
@@ -330,9 +336,9 @@ body {
   opacity: 0.5;
   transform: scale(0.8);
 }
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
+.swiper-wrapper .swiper-slide img {
+  width: 250px;
+  height: 350px;
   border-radius: 1.125rem;
   object-fit: cover;
 }
@@ -342,7 +348,7 @@ body {
   z-index: 10;
 }
 .drink-label {
-  font-family: "Be Vietnam Pro";
+  font-family: 'Be Vietnam Pro';
   font-weight: 700;
   font-size: 1rem;
   font-weight: bold;
@@ -607,7 +613,7 @@ body {
   }
 
   .section {
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
 
   .section-content h2 {
