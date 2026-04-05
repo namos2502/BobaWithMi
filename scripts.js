@@ -15,7 +15,12 @@ const foodGrid = document.querySelector('.food-grid');
 if (foodGrid) {
   foodGrid.innerHTML = foodImages
     .map((file) => {
-      const alt = file.replace(/\.[^.]+$/, '').replace(/-/g, ' ');
+      const alt = file
+        .replace(/\.[^.]+$/, '')
+        .replace(/-/g, ' ')
+        .split(' ')
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
       return `<div class="food-item"><img src="resources/foods/${file}" alt="${alt}" loading="lazy" /></div>`;
     })
     .join('');
