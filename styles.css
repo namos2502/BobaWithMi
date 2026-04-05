@@ -55,7 +55,7 @@
 .sub-title {
   /* Heading Subtitle */
   color: var(--text-color);
-  font-family: 'Be Vietnam Pro';
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
