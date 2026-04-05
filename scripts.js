@@ -51,6 +51,10 @@ if (typeof Swiper !== 'undefined' && document.querySelector('.mySwiper')) {
     keyboard: {
       enabled: true,
     },
+    mousewheel: {
+      enabled: true,
+      forceToAxis: true,
+    },
   });
 }
 
