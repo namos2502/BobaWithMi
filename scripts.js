@@ -33,6 +33,7 @@ if (typeof Swiper !== 'undefined' && document.querySelector('.mySwiper')) {
     slidesPerView: 'auto',
     spaceBetween: 30,
     centeredSlides: true,
+    grabCursor: true,
     freeMode: {
       enabled: true,
       momentum: true,
