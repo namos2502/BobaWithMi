@@ -27,42 +27,50 @@ if (foodGrid) {
 }
 
 //Swiper
-const swiper = new Swiper('.mySwiper', {
-  loop: true,
-  slidesPerView: 'auto',
-  spaceBetween: 30,
-  centeredSlides: true,
-  freeMode: {
-    enabled: true,
-    momentum: true,
-    momentumRatio: 0.5,
-  },
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  keyboard: {
-    enabled: true,
-  },
-});
+if (typeof Swiper !== 'undefined' && document.querySelector('.mySwiper')) {
+  new Swiper('.mySwiper', {
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    centeredSlides: true,
+    freeMode: {
+      enabled: true,
+      momentum: true,
+      momentumRatio: 0.5,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    keyboard: {
+      enabled: true,
+    },
+  });
+}
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
 
-document.querySelectorAll('.section').forEach((section) => {
-  observer.observe(section);
-});
+  document.querySelectorAll('.section').forEach((section) => {
+    observer.observe(section);
+  });
+} else {
+  document.querySelectorAll('.section').forEach((section) => {
+    section.classList.add('visible');
+  });
+}

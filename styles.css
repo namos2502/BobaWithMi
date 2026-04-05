@@ -65,7 +65,7 @@
 .body-text {
   /* Body Text */
   color: var(--text-color);
-  font-family: 'Be Vietnam Pro';
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
@@ -75,7 +75,7 @@
 .alter-text {
   /* Altered Body Text */
   color: var(--text-color);
-  font-family: 'Be Vietnam Pro';
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 300;
@@ -151,7 +151,7 @@ body {
 .nav-links a {
   text-decoration: none;
   color: var(--text-dark);
-  font-family: 'Be Vietnam Pro';
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
   transition: color 0.3s ease;
@@ -169,7 +169,7 @@ body {
   padding-bottom: 10px;
 
   /* Body text */
-  font-family: 'Be Vietnam Pro';
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
@@ -311,7 +311,7 @@ body {
   padding-bottom: 10px;
 
   /* Body text */
-  font-family: 'Be Vietnam Pro';
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
@@ -370,7 +370,7 @@ body {
   z-index: 10;
 }
 .drink-label {
-  font-family: 'Be Vietnam Pro';
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 700;
   font-size: 1rem;
   font-weight: bold;
@@ -695,7 +695,17 @@ body {
   }
 
   .title {
-    font-size: 3.5rem;
+    font-size: 2rem;
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .food-grid .food-item:last-child:nth-child(3n - 2) {
+    grid-column: 1 / -1;
+    max-width: 33.333%;
   }
 
   .section-content h2 {

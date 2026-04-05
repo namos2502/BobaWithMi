@@ -107,12 +107,8 @@
       rel="stylesheet"
     />
 
-    <!-- Preload drink images -->
+    <!-- Preload hero drink image -->
     <link rel="preload" href="resources/drinks/brownSugar.png" as="image" />
-    <link rel="preload" href="resources/drinks/flanSpecial.png" as="image" />
-    <link rel="preload" href="resources/drinks/matchaMango.png" as="image" />
-    <link rel="preload" href="resources/drinks/seaSalt.png" as="image" />
-    <link rel="preload" href="resources/drinks/sunSet.png" as="image" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="restaurant" />
@@ -335,6 +331,7 @@
               <img
                 src="./resources/drinks/seaSalt.png"
                 alt="Vietnamese Seasalt"
+                loading="lazy"
               />
               <div class="drink-label">Vietnamese Seasalt</div>
             </div>
@@ -342,6 +339,7 @@
               <img
                 src="./resources/drinks/flanSpecial.png"
                 alt="Flan Special"
+                loading="lazy"
               />
               <div class="drink-label">Flan Special</div>
             </div>
@@ -349,17 +347,19 @@
               <img
                 src="./resources/drinks/matchaMango.png"
                 alt="Matcha Mango"
+                loading="lazy"
               />
               <div class="drink-label">Matcha Mango Milk Tea</div>
             </div>
             <div class="swiper-slide">
-              <img src="./resources/drinks/sunSet.png" alt="Sunset Tea" />
+              <img src="./resources/drinks/sunSet.png" alt="Sunset Tea" loading="lazy" />
               <div class="drink-label">Brown Sugar Milk Tea</div>
             </div>
             <div class="swiper-slide">
               <img
                 src="./resources/drinks/seaSalt.png"
                 alt="Vietnamese Seasalt"
+                loading="lazy"
               />
               <div class="drink-label">Vietnamese Seasalt</div>
             </div>
@@ -367,15 +367,20 @@
               <img
                 src="./resources/drinks/flanSpecial.png"
                 alt="Flan Special"
+                loading="lazy"
               />
               <div class="drink-label">Flan Special</div>
             </div>
             <div class="swiper-slide">
-              <img src="./resources/drinks/matchaMango.png" alt="Matcha Mango" />
+              <img
+                src="./resources/drinks/matchaMango.png"
+                alt="Matcha Mango"
+                loading="lazy"
+              />
               <div class="drink-label">Matcha Mango Milk Tea</div>
             </div>
             <div class="swiper-slide">
-              <img src="./resources/drinks/sunSet.png" alt="Sunset Tea" />
+              <img src="./resources/drinks/sunSet.png" alt="Sunset Tea" loading="lazy" />
             </div>
           </div>
           <!-- Navigation buttons -->
@@ -392,22 +397,22 @@
         <h2 class="sub-title">
           Authentic Vietnamese street snacks to pair with your brew
         </h2>
-        <!-- <div class="menu-btn-wrapper">
+        <div class="food-grid"></div>
+        <p class="food-grid-cta">
+          Like what you see?
           <a
             href="https://bobawithmi-menu.tiiny.site"
             target="_blank"
             rel="noopener noreferrer"
-            class="menu-btn"
-            aria-label="View Menu"
             >View Menu</a
           >
-        </div> -->
-        <div class="food-grid"></div>
-        <p class="food-grid-cta">
-          Like what you see?
-          <a href="https://bobawithmi-menu.tiiny.site" target="_blank" rel="noopener noreferrer">View Menu</a>
           or
-          <a href="https://www.doordash.com/store/infini-tea-falls-church-1751324/18625753/?aw=L94pJBt_h1GGXtCG&utm_source=mx_share" target="_blank" rel="noopener noreferrer">Order Now</a>
+          <a
+            href="https://www.doordash.com/store/infini-tea-falls-church-1751324/18625753/?aw=L94pJBt_h1GGXtCG&utm_source=mx_share"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Order Now</a
+          >
         </p>
       </div>
     </section>
