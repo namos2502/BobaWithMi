@@ -13,8 +13,7 @@
    ======================================== */
 
 :root {
-  --primary-brown: #8b7355;
-  --primary-brown-dark: #6d5845;
+  --navbar-height: 80px;
   --text-dark: #333;
   --text-light: #555;
   --text-gray: #666;
@@ -56,31 +55,31 @@
 .sub-title {
   /* Heading Subtitle */
   color: var(--text-color);
-  font-family: 'Be Vietnam Pro';
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 1.4;
 }
 
 .body-text {
   /* Body Text */
   color: var(--text-color);
-  font-family: 'Be Vietnam Pro';
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 1.6;
 }
 
 .alter-text {
   /* Altered Body Text */
   color: var(--text-color);
-  font-family: 'Be Vietnam Pro';
-  font-size: 0.625rem;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 300;
-  line-height: normal;
+  line-height: 1.5;
 }
 
 .highlight-text {
@@ -98,10 +97,11 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:
+    'Be Vietnam Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-dark);
   line-height: 1.6;
-  background-color: var(--bg-light);
+  background-color: var(--background-color);
 }
 
 /* ========================================
@@ -151,7 +151,7 @@ body {
 .nav-links a {
   text-decoration: none;
   color: var(--text-dark);
-  font-family: 'Be Vietnam Pro';
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
   transition: color 0.3s ease;
@@ -169,19 +169,21 @@ body {
   padding-bottom: 10px;
 
   /* Body text */
-  font-family: 'Be Vietnam Pro';
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   color: var(--button-text-color);
+  white-space: nowrap;
 
   /* Colors */
   border-radius: 1.125rem;
   border: 1px solid #ffffe4;
   background: var(--primary-color);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .nav-links a.nav-btn:hover {
@@ -193,7 +195,7 @@ body {
    ======================================== */
 
 .hero {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -201,7 +203,7 @@ body {
   text-align: center;
   padding: 2rem;
   position: relative;
-  margin-top: calc(-80px);
+  margin-top: calc(-1 * var(--navbar-height));
 }
 
 .hero-content {
@@ -210,7 +212,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
 }
 
@@ -220,9 +222,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  color: var(--primary-brown);
+  width: 44px;
+  height: 44px;
+  color: var(--secondary-color);
   text-decoration: none;
   animation: bounce 2s infinite;
 }
@@ -235,7 +237,7 @@ body {
 }
 
 .scroll-chevron:hover {
-  color: var(--primary-brown-dark);
+  color: var(--primary-color);
 }
 
 @keyframes bounce {
@@ -248,6 +250,18 @@ body {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .scroll-chevron {
+    animation: none;
+  }
+
+  .js .section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* ========================================
    SECTIONS
    ======================================== */
@@ -257,6 +271,19 @@ body {
   padding: 6rem 2rem;
   position: relative;
   scroll-margin-top: 100px;
+}
+
+.js .section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.js .section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section-content {
@@ -284,7 +311,7 @@ body {
   padding-bottom: 10px;
 
   /* Body text */
-  font-family: 'Be Vietnam Pro';
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
@@ -297,7 +324,8 @@ body {
   border: 1px solid #ffffe4;
   background: var(--primary-color);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .section-content .menu-btn:hover {
@@ -342,7 +370,7 @@ body {
   z-index: 10;
 }
 .drink-label {
-  font-family: 'Be Vietnam Pro';
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 700;
   font-size: 1rem;
   font-weight: bold;
@@ -359,6 +387,71 @@ body {
   /* background-color: rgb(221, 231, 218, 0.8); */
   padding: 40px 20px;
   border-radius: 1.125rem;
+}
+
+/* ========================================
+   FOOD GRID SECTION
+   ======================================== */
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+  justify-items: center;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.food-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.food-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.food-item img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Last item alone → center it in the grid */
+.food-grid .food-item:last-child:nth-child(3n - 2) {
+  grid-column: 1 / -1;
+  max-width: 33.333%;
+}
+
+.food-grid-cta {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.food-grid-cta a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.food-grid-cta a:hover {
+  color: #4b6943;
 }
 
 /* ========================================
@@ -416,7 +509,7 @@ body {
 }
 
 .email-link:hover {
-  color: var(--primary-brown);
+  color: var(--accent-color);
 }
 
 .phone-link {
@@ -426,7 +519,7 @@ body {
 }
 
 .phone-link:hover {
-  color: var(--primary-brown);
+  color: var(--accent-color);
 }
 
 .social-icon {
@@ -451,7 +544,7 @@ body {
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -524,7 +617,7 @@ body {
 
 @media (max-width: 768px) {
   .nav-links {
-    gap: 1.5rem;
+    gap: 1rem;
     font-size: 0.9rem;
   }
 
@@ -571,13 +664,23 @@ body {
   .map-container {
     height: 300px;
   }
+
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .food-grid .food-item:last-child:nth-child(3n - 2) {
+    grid-column: auto;
+    max-width: 100%;
+  }
 }
 
 /* ========================================
-   RESPONSIVE DESIGN - Mobile (480px)
+   RESPONSIVE DESIGN - Mobile (700px)
    ======================================== */
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
   .nav-container {
     padding: 0.6rem 1rem;
   }
@@ -591,23 +694,18 @@ body {
     display: none;
   }
 
-  .nav-links a.nav-btn {
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-
   .title {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
 
-  .section {
-    /* min-height: 100vh; */
+  .food-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .food-grid .food-item:last-child:nth-child(3n - 2) {
+    grid-column: 1 / -1;
+    max-width: 33.333%;
   }
 
   .section-content h2 {
